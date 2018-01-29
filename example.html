@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Example</title>
+</head>
+<style>
+    h1 {
+        color:red;
+        animation-name: spin;
+        animation-duration: 4000ms;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+    p {color:blue;}
+    @keyframes spin { 
+        from { 
+            transform: rotate(0deg); 
+        } to { 
+            transform: rotate(359deg); 
+        }
+    }
+</style>
+<body>
+    <h1 style="color: black; font-size: 50px;">Hello world</h1>
+    <p>Nisi sint est et labore magna consequat irure adipisicing veniam mollit non. 
+    Tempor cupidatat duis veniam aute proident. Mollit eiusmod dolore magna elit est 
+    sunt cupidatat adipisicing sint pariatur sint esse ex voluptate. Labore irure laboris 
+    elit consectetur amet. Anim dolore laboris incididunt nulla et in cupidatat. Esse duis 
+    ipsum ullamco officia.</p>
+</body>
+<script>
+    var person = prompt("Please enter your name", "Harry Potter");
+    console.log(person);
+    var paragraph = document.createElement('p');
+    paragraph.innerText = person;
+    document.body.appendChild(paragraph);
+    
+
+    var button = document.createElement("button");
+    button.addEventListener("click", function(event){ 
+        event.preventDefault();
+        alert('dont click it again');
+        console.log(event.target);
+        paragraph.style.color = "orange";
+        paragraph.style.fontSize = "50px";
+        const nmb = 8;
+        console.log(nmb);
+        });
+        
+    document.body.appendChild(button);
+    
+</script>
+</html>
